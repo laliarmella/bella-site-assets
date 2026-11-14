@@ -454,8 +454,8 @@ function render(){
 }
 function schedule(){if(pending)return;pending=true;Promise.resolve().then(function(){pending=false;render()})}
 function fit(){try{var fe=window.frameElement;if(!fe)return;var h=Math.ceil(host.getBoundingClientRect().height);if(h<50)return;
- fe.style.height=h+'px';fe.style.width='100%';fe.style.maxWidth='100%';fe.setAttribute('height',h);fe.setAttribute('width','100%');
- var p=fe.parentElement;for(var i=0;i<5&&p&&p!==fe.ownerDocument.body;i++){p.style.height='auto';p.style.maxHeight='none';p.style.overflow='visible';p.style.width='100%';p.style.maxWidth='100%';p=p.parentElement}}catch(e){}}
+ fe.style.height=h+'px';fe.style.setProperty('width','100%','important');fe.style.setProperty('max-width','100%','important');fe.setAttribute('height',h);fe.setAttribute('width','100%');
+ var p=fe.parentElement;for(var i=0;i<5&&p&&p!==fe.ownerDocument.body;i++){p.style.height='auto';p.style.maxHeight='none';p.style.overflow='visible';p.style.setProperty('width','100%','important');p.style.setProperty('max-width','100%','important');p=p.parentElement}}catch(e){}}
 if(window.ResizeObserver)new ResizeObserver(fit).observe(host);
 window.addEventListener('resize',fit);window.addEventListener('load',fit);setTimeout(fit,300);setTimeout(fit,1500);
 render();
