@@ -332,7 +332,6 @@ class Component extends DCLogic {
       { q: 'How many PRP under-eye sessions will I need?', a: 'A series of three to four initial sessions is typically recommended for the best results.' },
       { q: 'Do you offer payment plans?', a: 'Yes. You can pay over time with Affirm on orders of $50 or more.' },
       { q: 'Can my teen get a facial?', a: 'Yes. Our Teen Facial is designed for ages 12 to 19 and focuses on clearing mild congestion with simple, gentle care.' },
-      { q: 'What does the Laser Club membership include?', a: 'Unlimited medical-grade laser hair removal sessions on 3 areas for one flat monthly rate, spaced to match your natural hair growth cycle. Members also receive 5% off skincare products and 10% off all other services.' },
       { q: 'Where are you located?', a: 'We are in Naples, Florida at 809 Walkerbilt Rd, Ste #4.' }
     ];
 
