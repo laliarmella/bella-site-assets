@@ -40,4 +40,11 @@ root.addEventListener('click',function(e){
  var g=e.target.closest('[data-go]');if(g){window.location.href=LINKS[g.getAttribute('data-go')]}
 });
 render();
+
+function fit(){try{var fe=window.frameElement;if(!fe)return;var h=Math.ceil(host.getBoundingClientRect().height);if(h<50)return;
+ fe.style.height=h+'px';fe.style.width='100%';fe.style.maxWidth='100%';fe.setAttribute('height',h);fe.setAttribute('width','100%');
+ var p=fe.parentElement;for(var i=0;i<5&&p&&p!==fe.ownerDocument.body;i++){p.style.height='auto';p.style.maxHeight='none';p.style.overflow='visible';p.style.width='100%';p.style.maxWidth='100%';p=p.parentElement}}catch(e){}}
+d.body.style.margin='0';d.documentElement.style.margin='0';
+if(window.ResizeObserver){new ResizeObserver(fit).observe(host)}
+window.addEventListener('resize',fit);window.addEventListener('load',fit);setTimeout(fit,300);setTimeout(fit,1500);fit();
 })();
