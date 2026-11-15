@@ -14,6 +14,7 @@ var css='@font-face{font-family:Aloevera;font-weight:500;src:url('+B+'fonts/aloe
 '#bbl-hdr nav a{font-weight:500;font-size:15px;color:#393A21;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}'+
 '#bbl-hdr nav a.on{border-bottom-color:#7A4C37;color:#7A4C37}'+
 '#bbl-hdr .bk{background:#7A4C37;color:#fff;font-weight:600;font-size:13px;letter-spacing:.06em;padding:14px 26px;border-radius:999px;text-decoration:none}'+
+'#bbl-hdr .ac{font-weight:500;font-size:14px;color:#393A21;text-decoration:none;margin-right:6px}'+
 '#bbl-hdr .mb{display:none;background:none;border:1px solid #393A21;color:#393A21;border-radius:999px;padding:10px 16px;font:500 13px Aloevera,sans-serif}'+
 '#bbl-hdr .mn{display:none;padding:8px clamp(20px,5vw,48px) 16px;flex-direction:column}'+
 '#bbl-hdr .mn a{padding:12px 0;color:#393A21;text-decoration:none;font-weight:500;border-top:1px solid rgba(57,58,33,.1)}'+
@@ -28,7 +29,8 @@ var css='@font-face{font-family:Aloevera;font-weight:500;src:url('+B+'fonts/aloe
 var st=D.createElement('style');st.id='bbl-chrome';st.textContent=css;D.head.appendChild(st);
 function L(a){return '<a href="'+a[1]+'"'+(path===a[1]?' class="on"':'')+'>'+a[0]+'</a>'}
 var h=D.createElement('div');h.id='bbl-hdr';
-h.innerHTML='<div class="in"><a href="/home"><img src="'+B+'img/bbl-green.png" alt="Bella Beauty Lounge"></a><nav>'+links.map(L).join('')+'</nav><div style="display:flex;gap:10px;align-items:center"><a class="bk" href="/book-now">Book now</a><button class="mb" type="button">Menu</button></div></div><div class="mn">'+links.map(function(a){return '<a href="'+a[1]+'">'+a[0]+'</a>'}).join('')+'</div>';
+h.innerHTML='<div class="in"><a href="/home"><img src="'+B+'img/bbl-green.png" alt="Bella Beauty Lounge"></a><nav>'+links.map(L).join('')+'</nav><div style="display:flex;gap:10px;align-items:center"><a class="ac" data-k=".v-login" href="#">Login</a><a class="ac" data-k=".cart-comp" href="#">Cart</a><a class="bk" href="/book-now">Book now</a><button class="mb" type="button">Menu</button></div></div><div class="mn">'+links.map(function(a){return '<a href="'+a[1]+'">'+a[0]+'</a>'}).join('')+'</div>';
+[].forEach.call(h.querySelectorAll('.ac'),function(a){a.onclick=function(e){e.preventDefault();var t=D.querySelector(a.getAttribute('data-k'));if(t)t.click()}});
 h.querySelector('.mb').onclick=function(){h.classList.toggle('open')};
 var f=D.createElement('div');f.id='bbl-ftr';
 f.innerHTML='<div class="in"><div><img src="'+B+'img/bbl-white.png" alt="Bella Beauty Lounge"><p>Feel well. Look beautifully you.</p></div><div><h4>Explore</h4>'+links.map(function(a){return '<a href="'+a[1]+'">'+a[0]+'</a>'}).join('')+'</div><div><h4>Visit</h4><a style="pointer-events:none">809 Walkerbilt Rd, Ste #4</a><a style="pointer-events:none">Naples, FL 34110</a><a style="pointer-events:none">By appointment only</a><a href="tel:+12392980661">(239) 298-0661</a><a href="https://www.instagram.com/bellabeauty.lng/" target="_blank" rel="noopener">@bellabeauty.lng</a></div></div><div class="c">&copy; Bella Beauty Lounge. Booking powered by Vagaro.</div>';
