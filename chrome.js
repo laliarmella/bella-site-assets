@@ -7,6 +7,7 @@ var path=P.location.pathname.replace(/\/$/,'');
 var css='@font-face{font-family:Aloevera;font-weight:500;src:url('+B+'fonts/aloevera-500.woff2) format("woff2")}'+
 '@font-face{font-family:Aloevera;font-weight:700;src:url('+B+'fonts/aloevera-700.woff2) format("woff2")}'+
 '.v-navigation-bar{display:none!important}'+
+'#bbl-hdr,#bbl-ftr{width:100%;align-self:stretch;flex:none}'+
 '#bbl-hdr{position:sticky;top:0;z-index:999;background:rgba(246,240,232,.96);border-bottom:1px solid rgba(57,58,33,.12);font-family:Aloevera,sans-serif}'+
 '#bbl-hdr .in{max-width:1240px;margin:0 auto;padding:12px clamp(20px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:24px}'+
 '#bbl-hdr img{height:64px;width:auto;display:block}'+
@@ -38,6 +39,6 @@ var root=D.querySelector('.v-page-root')||D.body;
 root.insertBefore(h,root.firstChild);
 var vf=D.querySelector('.v-footer');
 if(vf&&vf.parentNode)vf.parentNode.insertBefore(f,vf);else root.appendChild(f);
-var fe=P.frameElement,sec=fe&&fe.closest('.v-section');if(sec)sec.style.display='none';
+[].forEach.call(D.querySelectorAll('.v-section'),function(x){if(x.querySelector('.v-html-embed'))x.style.display='none'});
 }catch(e){}
 })();
