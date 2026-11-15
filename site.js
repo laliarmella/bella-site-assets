@@ -403,7 +403,7 @@ class Component extends DCLogic {
         { name: 'Take a moment', sub: 'The Bella experience', aria: 'Video of a candle being lit. Opens services.', src: 'https://cdn.jsdelivr.net/gh/laliarmella/bella-site-assets@main/vid/candle.mp4', poster: 'https://cdn.jsdelivr.net/gh/laliarmella/bella-site-assets@main/vid/candle.jpg' }
       ],
 
-      cats: cats.map((c, i) => ({ name: c.name, on: i === svc, off: i !== svc, pick: (e) => { this.setState({ svc: i }); try { const r = e && e.target && e.target.getRootNode(); setTimeout(() => { const pn = r && r.querySelector('[role=tabpanel]'); const tl = r && r.querySelector('[role=tablist]'); if (pn && tl && pn.getBoundingClientRect().top >= tl.getBoundingClientRect().bottom - 4) pn.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 80); } catch (x) {} } })),
+      cats: cats.map((c, i) => ({ name: c.name, on: i === svc, off: i !== svc, pick: (e) => { this.setState({ svc: i }); try { const t0 = e && (e.composedPath ? e.composedPath()[0] : e.target); const r = t0 && t0.getRootNode(); setTimeout(() => { const pn = r && r.querySelector('[role=tabpanel]'); const tl = r && r.querySelector('[role=tablist]'); if (pn && tl && pn.getBoundingClientRect().top >= tl.getBoundingClientRect().bottom - 4) pn.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 80); } catch (x) {} } })),
       cat: cats[svc],
 
       aboutStory: this.state.about === 'story',
