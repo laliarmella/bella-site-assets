@@ -93,52 +93,52 @@ class Component extends DCLogic {
   "items": [
    {
     "name": "New set (Permanent Makeup Brows)",
-    "price": "From $400",
+    "price": "$400",
     "desc": "Enhance your natural beauty with customized permanent makeup brows. Whether you already know which technique you want or need help choosing between Nano Brows, Powder Brows, or Combo Brows, this service is the perfect place to start. During your appointment, we will evaluate your natural brows, discuss your preferences, and determine the best technique to achieve your desired results. If you're ready to proceed, we can also perform your chosen brow procedure during your appointment, depending on suitability and availability. Our goal is to create beautiful, natural-looking brows tailored to your facial features and personal style."
    },
    {
     "name": "Brow touch-up (Permanent Makeup Brows)",
-    "price": "From $100",
+    "price": "$100",
     "desc": "Only available to clients who were treated by Karoll. Time to refresh those brows! A touch-up brings back the color, definition, and shape you love, keeping your PMU looking crisp, soft, and flawless. Perfect for maintaining that fresh, polished look all year long. First touch up is included. Touch-ups after 4-10 weeks $100, after 11 weeks to 5 months $140, after 5 to 11 months $180."
    },
    {
     "name": "Korean Lash Lift + Tint",
-    "price": "From $120",
+    "price": "$120",
     "desc": "Lifts and darkens your own lashes from the root for a curled, mascara effect with nothing on them. No extensions, no daily routine. Lasts 6 to 8 weeks."
    },
    {
     "name": "Signature Brow (Lamination+ Wax + Tint)",
-    "price": "From $110",
+    "price": "$110",
     "desc": "Smooths and sets your brow hairs into a fuller, more structured shape, no makeup required. Holds for 4 to 5 weeks."
    },
    {
     "name": "Brow Wax + Mapping (No Tint)",
-    "price": "From $40",
+    "price": "$40",
     "desc": "(Threading available) Custom eyebrow design and shaping that defines and balances your brows to complement your facial structure. Clean, immediate results that hold for 3 to 4 weeks."
    },
    {
     "name": "Brow Wax + Mapping + Henna",
-    "price": "From $60",
+    "price": "$60",
     "desc": "(Threading available) I shape your brows to perfection with precise mapping, gentle waxing, and long-lasting henna for a fuller, naturally defined look. Clean, symmetrical, and beautifully enhanced brows that elevate your entire face. Results that last, flatter, and glow. Lasts 3 to 7 days on skin, up to 2 weeks on the hairs themselves."
    },
    {
     "name": "Brow Wax + Mapping + Tint",
-    "price": "From $60",
+    "price": "$60",
     "desc": "(Threading available) A tint that deepens your natural color and sharpens the shape underneath. Subtle, not drawn-on. Lasts 1 to 3 days on skin, up to 4 weeks on the brow hairs."
    },
    {
     "name": "Powder Brows",
-    "price": "From $400",
+    "price": "$400",
     "desc": "A soft, shaded brow that looks like filled-in makeup, not a tattoo. Semi-permanent, built to last 1 to 3 years with upkeep. First touch up included."
    },
    {
     "name": "Combo Brows",
-    "price": "From $400",
+    "price": "$400",
     "desc": "Hair-stroke detail at the front of the brow, soft shading through the tail. The most natural-looking of the semi-permanent options. Lasts 1 to 3 years with touch-ups. First touch up included."
    },
    {
     "name": "Nano Brows",
-    "price": "From $450",
+    "price": "$450",
     "desc": "Ultra-fine strokes that mimic real brow hairs one by one. For anyone who wants the most realistic, hair-by-hair finish. Lasts 1 to 3 years, touch-ups available. First touch up included."
    }
   ]
@@ -149,48 +149,68 @@ class Component extends DCLogic {
   "items": [
    {
     "name": "Nostrils Wax",
-    "price": "From $10",
+    "price": "$10",
     "desc": ""
    },
    {
     "name": "Lips",
-    "price": "From $20",
+    "price": "$20",
     "desc": ""
    },
    {
     "name": "Chin",
-    "price": "From $15",
+    "price": "$15",
     "desc": ""
    },
    {
     "name": "Side-burns",
-    "price": "From $15",
+    "price": "$20",
     "desc": ""
    },
    {
     "name": "Underarms",
-    "price": "From $20",
+    "price": "$20",
     "desc": ""
    },
    {
     "name": "Full arms",
-    "price": "From $55",
+    "price": "$55",
     "desc": ""
    },
    {
     "name": "Half arms",
-    "price": "From $30",
+    "price": "$30",
+    "desc": ""
+   },
+   {
+    "name": "Full legs",
+    "price": "$85",
+    "desc": ""
+   },
+   {
+    "name": "Half legs",
+    "price": "$50",
     "desc": ""
    },
    {
     "name": "Hand Wax",
-    "price": "Add-ons from $20",
-    "desc": "Waxing for the hands. Add underarms when you book."
+    "price": "$15",
+    "desc": ""
    },
    {
     "name": "Bikini Line",
-    "price": "Add-ons from $20",
-    "desc": "A clean bikini-line wax. Add underarms or lip wax when you book."
+    "price": "$40",
+    "desc": ""
+   },
+   {
+    "name": "Bikini (full)",
+    "price": "$50",
+    "desc": ""
+   },
+   {
+    "name": "Full Brazilian",
+    "price": "$70",
+    "desc": ""
    }
   ]
  },
