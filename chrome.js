@@ -8,7 +8,7 @@ var css='@font-face{font-family:Aloevera;font-weight:500;src:url('+B+'fonts/aloe
 '@font-face{font-family:Aloevera;font-weight:700;src:url('+B+'fonts/aloevera-700.woff2) format("woff2")}'+
 '.v-navigation-bar{display:none!important}'+
 '#bbl-hdr,#bbl-ftr{width:100%;align-self:stretch;flex:none}'+
-'.v-section.v-foot{display:none!important}'+
+'.v-section.v-footer{display:none!important}'+
 '#bbl-hdr{position:sticky;top:0;z-index:999;background:#F6F0E8;border-bottom:1px solid rgba(57,58,33,.12);font-family:Aloevera,sans-serif}'+
 '#bbl-hdr .in{max-width:1240px;margin:0 auto;padding:12px clamp(20px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:24px}'+
 '#bbl-hdr img{height:64px;width:auto;display:block}'+
