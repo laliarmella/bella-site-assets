@@ -14,9 +14,9 @@ var css='@font-face{font-family:Aloevera;font-weight:500;src:url('+B+'fonts/aloe
 '#bbl-hdr nav{display:flex;gap:30px}'+
 '#bbl-hdr nav a{font-weight:500;font-size:15px;color:#393A21;text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}'+
 '#bbl-hdr nav a.on{border-bottom-color:#7A4C37;color:#7A4C37}'+
-'#bbl-hdr .bk{background:#7A4C37;color:#fff;font-weight:600;font-size:13px;letter-spacing:.06em;padding:14px 26px;border-radius:999px;text-decoration:none}'+
+'#bbl-hdr .bk{background:#7A4C37;color:#fff;font-weight:600;font-size:13px;letter-spacing:.06em;padding:14px 26px;border-radius:10px;text-decoration:none}'+
 '#bbl-hdr .ac{font-weight:500;font-size:14px;color:#393A21;text-decoration:none;margin-right:6px}'+
-'#bbl-hdr .mb{display:none;background:none;border:1px solid #393A21;color:#393A21;border-radius:999px;padding:10px 16px;font:500 13px Aloevera,sans-serif}'+
+'#bbl-hdr .mb{display:none;background:none;border:1px solid #393A21;color:#393A21;border-radius:12px;padding:10px 16px;font:500 13px Aloevera,sans-serif}'+
 '#bbl-hdr .mn{display:none;padding:8px clamp(20px,5vw,48px) 16px;flex-direction:column}'+
 '#bbl-hdr .mn a{padding:12px 0;color:#393A21;text-decoration:none;font-weight:500;border-top:1px solid rgba(57,58,33,.1)}'+
 '#bbl-hdr.open .mn{display:flex}'+
@@ -26,7 +26,11 @@ var css='@font-face{font-family:Aloevera;font-weight:500;src:url('+B+'fonts/aloe
 '#bbl-ftr img{height:100px;width:auto;display:block;margin-bottom:14px}'+
 '#bbl-ftr p{margin:0;font-size:17px}#bbl-ftr a{display:block;color:#D2C3AF;text-decoration:none;font-size:17px;line-height:1.9}'+
 '#bbl-ftr h4{margin:0 0 6px;font-weight:500;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#F6F0E8}'+
-'#bbl-ftr .c{max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,48px) 28px;font-size:14px;color:#B9AC98}';
+'#bbl-ftr .c{max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,48px) 28px;font-size:14px;color:#B9AC98;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}'+
+'#bbl-ftr .lg{max-width:1240px;margin:0 auto;padding:0 clamp(20px,5vw,48px) 24px;font-size:14px;line-height:1.55;color:#B9AC98}'+
+'#bbl-ftr .lg .ll{border-top:1px solid rgba(210,195,175,.2);padding-top:22px;display:flex;flex-wrap:wrap;gap:8px 24px;margin-bottom:16px}'+
+'#bbl-ftr .lg .ll a{display:inline;font-size:16px;line-height:1.5;text-decoration:underline;text-underline-offset:3px}'+
+'#bbl-ftr .lg p{margin:0 0 12px;font-size:14px}#bbl-ftr .lg p.nt{padding-left:14px;border-left:3px solid #D2C3AF;font-weight:700;color:#D2C3AF;letter-spacing:.01em}';
 var st=D.createElement('style');st.id='bbl-chrome';st.textContent=css;D.head.appendChild(st);
 function L(a){return '<a href="'+a[1]+'"'+(path===a[1]?' class="on"':'')+'>'+a[0]+'</a>'}
 var h=D.createElement('div');h.id='bbl-hdr';
@@ -34,7 +38,7 @@ h.innerHTML='<div class="in"><a href="/home"><img src="'+B+'img/bbl-green.png" a
 [].forEach.call(h.querySelectorAll('.ac'),function(a){a.onclick=function(e){e.preventDefault();var t=D.querySelector(a.getAttribute('data-k'));if(t)t.click()}});
 h.querySelector('.mb').onclick=function(){h.classList.toggle('open')};
 var f=D.createElement('div');f.id='bbl-ftr';
-f.innerHTML='<div class="in"><div><img src="'+B+'img/bbl-white.png" alt="Bella Beauty Lounge"><p>Feel well. Look beautifully you.</p></div><div><h4>Explore</h4>'+links.map(function(a){return '<a href="'+a[1]+'">'+a[0]+'</a>'}).join('')+'</div><div><h4>Visit</h4><a style="pointer-events:none">809 Walkerbilt Rd, Ste #4</a><a style="pointer-events:none">Naples, FL 34110</a><a style="pointer-events:none">By appointment only</a><a href="tel:+12392980661">(239) 298-0661</a><a href="https://www.instagram.com/bellabeauty.lng/" target="_blank" rel="noopener">@bellabeauty.lng</a></div></div><div class="c">&copy; Bella Beauty Lounge. Booking powered by Vagaro.</div>';
+f.innerHTML='<div class="in"><div><img src="'+B+'img/bbl-white.png" alt="Bella Beauty Lounge"><p>Feel well. Look beautifully you.</p></div><div><h4>Explore</h4>'+links.map(function(a){return '<a href="'+a[1]+'">'+a[0]+'</a>'}).join('')+'</div><div><h4>Visit</h4><a style="pointer-events:none">809 Walkerbilt Rd, Ste #4</a><a style="pointer-events:none">Naples, FL 34110</a><a style="pointer-events:none">By appointment only</a><a href="tel:+12392980661">(239) 298-0661</a><a href="https://www.instagram.com/bellabeauty.lng/" target="_blank" rel="noopener">@bellabeauty.lng</a></div></div><div class="lg"><div class="ll"><a href="/home#privacy">Privacy policy</a><a href="/home#terms">Terms of use</a><a href="/home#disclaimer">Medical disclaimer</a><a href="/home#health">Health information</a><a href="/home#accessibility">Accessibility</a><a href="/home#director">Medical director</a></div><p>Medical services provided by licensed health care professionals under the supervision of a Florida-licensed physician medical director. This website is for information only and is not medical advice. Individual results vary.</p><p class="nt">THE PATIENT AND ANY OTHER PERSON RESPONSIBLE FOR PAYMENT HAS A RIGHT TO REFUSE TO PAY, CANCEL PAYMENT, OR BE REIMBURSED FOR PAYMENT FOR ANY OTHER SERVICE, EXAMINATION, OR TREATMENT THAT IS PERFORMED AS A RESULT OF AND WITHIN 72 HOURS OF RESPONDING TO THE ADVERTISEMENT FOR THE FREE, DISCOUNTED FEE, OR REDUCED FEE SERVICE, EXAMINATION, OR TREATMENT.</p><p>Payment options through Affirm are subject to an eligibility check and are provided by these lending partners: affirm.com/lenders. Xeomin&reg; is a registered trademark of Merz Pharmaceuticals, LLC; Botox&reg; is a registered trademark of Allergan, Inc. Bella Beauty Lounge is not affiliated with either company.</p></div><div class="c"><span>&copy; 2026 Bella Beauty Lounge. Booking powered by Vagaro.</span><span>Results vary by person. Medical treatments require a consultation.</span></div>';
 var root=D.querySelector('.v-page-root')||D.body;
 root.insertBefore(h,root.firstChild);
 var vf=D.querySelector('.v-footer');
